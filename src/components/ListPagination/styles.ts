@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+import { theme } from '@/styles.ts';
+
+export const Wrapper = styled.section`
   margin-top: 32px;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +46,11 @@ export const NavButton = styled(BaseButton)`
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  @media (max-width: ${theme.breakpoints.mobileLg}) {
+    & span {
+      display: none;
+    }
+  }
 `;
 
 export const PageButton = styled(BaseButton)<{ $active?: boolean }>`

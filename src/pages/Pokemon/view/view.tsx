@@ -97,37 +97,47 @@ const DetailedContent = () => {
             </DataSection>
 
             <DataSection>
-              <h2>Base Stats</h2>
-              {pokemon?.stats?.map((stat: PokemonStat) => (
-                <StateItem key={stat?.stat?.name}>
-                  <StateValue>
-                    <h4>{stat?.stat?.name}</h4>
-                    <strong>{stat.base_stat}</strong>
-                  </StateValue>
-                  <StateLineWrapper>
-                    <StateLine
-                      style={{
-                        width: `${Math.ceil((stat.base_stat / 250) * 100)}%`,
-                      }}
-                    />
-                  </StateLineWrapper>
-                </StateItem>
-              ))}
-              <AbilitySection>
-                <h2>Abilities</h2>
-                <AbilityWrapper>
-                  {pokemon?.abilities?.map((ability: PokemonAbility) => (
-                    <AbilityRow key={ability?.ability?.name}>
-                      <h4>{ability?.ability?.name}</h4>
-                      {ability?.is_hidden ? <span>(Hidden)</span> : ''}
-                    </AbilityRow>
+              {pokemon?.stats?.length ? (
+                <>
+                  <h2>Base Stats</h2>
+                  {pokemon?.stats?.map((stat: PokemonStat) => (
+                    <StateItem key={stat?.stat?.name}>
+                      <StateValue>
+                        <h4>{stat?.stat?.name}</h4>
+                        <strong>{stat.base_stat}</strong>
+                      </StateValue>
+                      <StateLineWrapper>
+                        <StateLine
+                          style={{
+                            width: `${Math.ceil((stat.base_stat / 250) * 100)}%`,
+                          }}
+                        />
+                      </StateLineWrapper>
+                    </StateItem>
                   ))}
-                </AbilityWrapper>
-              </AbilitySection>
+                </>
+              ) : (
+                ''
+              )}
+              {pokemon?.abilities?.length ? (
+                <AbilitySection>
+                  <h2>Abilities</h2>
+                  <AbilityWrapper>
+                    {pokemon?.abilities?.map((ability: PokemonAbility) => (
+                      <AbilityRow key={ability?.ability?.name}>
+                        <h4>{ability?.ability?.name}</h4>
+                        {ability?.is_hidden ? <span>(Hidden)</span> : ''}
+                      </AbilityRow>
+                    ))}
+                  </AbilityWrapper>
+                </AbilitySection>
+              ) : (
+                ''
+              )}
 
               <AbilitySection>
                 <h2>Base Experience</h2>
-                <ExperienceNumber>{pokemon?.base_experience} XP</ExperienceNumber>
+                <ExperienceNumber>{pokemon?.base_experience || 0} XP</ExperienceNumber>
               </AbilitySection>
             </DataSection>
           </Body>

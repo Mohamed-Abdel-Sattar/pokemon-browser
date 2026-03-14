@@ -66,10 +66,10 @@ export const Body = styled.main`
   display: flex;
   gap: 24px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ${theme.breakpoints.tablet}) {
     flex-direction: column;
   }
-  @media (min-width: 768px) {
+  @media (min-width: ${theme.breakpoints.tablet}) {
     align-items: center;
   }
 `;

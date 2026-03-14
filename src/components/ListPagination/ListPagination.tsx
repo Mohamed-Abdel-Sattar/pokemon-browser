@@ -50,7 +50,7 @@ const ListPagination: FC<Props> = ({ currentPage, totalPages, pageSize, totalIte
       <PaginationRow>
         <NavButton onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1} aria-label="Go to previous page">
           <ChevronLeft />
-          Previous
+          <span>Previous</span>
         </NavButton>
 
         {visiblePages.map((item, index) =>
@@ -70,7 +70,7 @@ const ListPagination: FC<Props> = ({ currentPage, totalPages, pageSize, totalIte
         )}
 
         <NavButton onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} aria-label="Go to next page">
-          Next
+          <span>Next</span>
           <ChevronRight />
         </NavButton>
       </PaginationRow>

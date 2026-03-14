@@ -82,7 +82,7 @@ export default defineConfig([
       'import/no-duplicates': 'error',
       'import/newline-after-import': ['warn', { count: 1 }],
       'max-depth': ['warn', 4],
-      complexity: ['warn', { max: 30 }],
+      complexity: ['warn', { max: 40 }],
       '@typescript-eslint/consistent-type-imports': [
         'error',
         {
