@@ -1,0 +1,51 @@
+{
+  "name": "pokemon-browser",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite --open",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "preview": "vite preview"
+  },
+  "author": {
+    "name": "Mohamed Abdel sattar",
+    "email": "abdel.sattar.bombo@gmail.com"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "notistack": "^3.0.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-error-boundary": "^6.1.1",
+    "react-helmet": "^6.1.0",
+    "react-infinite-scroll-component": "^6.1.1",
+    "react-router-dom": "^7.13.1",
+    "styled-components": "^6.3.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-helmet": "^6.1.11",
+    "@types/styled-components": "^5.1.36",
+    "@vitejs/plugin-react": "^6.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "^8.0.0"
+  }
+}
