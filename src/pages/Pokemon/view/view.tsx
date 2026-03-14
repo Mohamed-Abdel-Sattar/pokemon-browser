@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 
 import pokemonIcon from '@/assets/pokemon.svg';
 import { ErrorAlert } from '@/components/ErrorAlert';
+import { SEO } from '@/components/SEO';
 import SpinnerLoading from '@/components/SpinnerLoading/SpinnerLoading.tsx';
 import { usePokemonDetails } from '@/context/PokemonDetails';
+import { capitalizeWords } from '@/utils';
 
 import type { PokemonAbility, PokemonStat, PokemonType } from '@/types/pokemon.ts';
 import type { AxiosError } from 'axios';
@@ -29,8 +31,6 @@ import {
   TypeItem,
   TypesWrapper,
 } from '../styles';
-import { capitalizeWords } from '@/utils'
-import { SEO } from '@/components/SEO'
 
 const DetailedContent = () => {
   const { pokemon, loading, error } = usePokemonDetails();
@@ -46,10 +46,11 @@ const DetailedContent = () => {
 
   return (
     <>
-      <SEO title={capitalizeWords(pokemon?.name || 'Pokémon')}
-           pathname={window.location.origin}
-           titleTemplate='Pokédex'
-           description="Pokémon detailed page"
+      <SEO
+        title={capitalizeWords(pokemon?.name || 'Pokémon')}
+        pathname={window.location.origin}
+        titleTemplate="Pokédex"
+        description="Pokémon detailed page"
       />
 
       <Link to="/pagination">← Back to List</Link>

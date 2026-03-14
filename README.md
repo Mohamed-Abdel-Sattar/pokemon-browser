@@ -9,9 +9,9 @@ The application allows users to browse Pokémon using **pagination or a load-mor
 
 - Pokémon grid browser
 - Two browsing modes
-    - **Pagination view**
-    - **Load More view**
-    - **Infinite Scroll view**
+  - **Pagination view**
+  - **Load More view**
+  - **Infinite Scroll view**
 - Dedicated **Pokémon details page**
 - Responsive UI
 - Error handling
@@ -26,15 +26,15 @@ The application allows users to browse Pokémon using **pagination or a load-mor
 
 ## Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| React | UI library |
-| TypeScript | Type safety |
-| Vite | Build tool |
-| Styled Components | Styling |
-| React Router | Routing |
-| Axios | HTTP client |
-| Notistack | Snackbar notifications |
+| Technology        | Purpose                |
+| ----------------- | ---------------------- |
+| React             | UI library             |
+| TypeScript        | Type safety            |
+| Vite              | Build tool             |
+| Styled Components | Styling                |
+| React Router      | Routing                |
+| Axios             | HTTP client            |
+| Notistack         | Snackbar notifications |
 
 ---
 
@@ -55,7 +55,6 @@ https://pokeapi.co/docs/v2
 
 ---
 
-
 ## Environment Variables
 
 Environment variables are loaded using **Vite's `.env` system**.
@@ -63,14 +62,13 @@ Environment variables are loaded using **Vite's `.env` system**.
 Example `.env` file:
 `VITE_BASE_URL=https://pokeapi.co/api/v2`
 
-
 Usage in code:
 
 ```ts
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 ```
----
 
+---
 
 ## Installation
 
@@ -79,13 +77,17 @@ git clone https://github.com/Mohamed-Abdel-Sattar/pokemon-browser.git
 ```
 
 ### Install dependencies:
+
 ```bash
 yarn install
 ```
+
 ---
+
 ## Running the Application
 
 ### Start the development server:
+
 ```bash
 yarn start
 ```

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import { namedRoutes } from '@/AppRoutes.tsx';
 import pokemonIcon from '@/assets/pokemon.svg';
-import { SEO } from '@/components/SEO'
-import { capitalizeWords } from '@/utils'
+import { SEO } from '@/components/SEO';
+import { capitalizeWords } from '@/utils';
 
 import { Header, Nav, NavLinkButton, Subtitle, Title } from './styles.ts';
 
@@ -15,25 +15,26 @@ type Props = {
 const NavigationHeader: FC<Props> = ({ listType }) => {
   return (
     <>
-      <SEO title={capitalizeWords(listType)}
-           pathname={window.location.origin}
-           titleTemplate='Pokédex'
-           description={`Discover and explore Pokemon with ${listType}`}
+      <SEO
+        title={capitalizeWords(listType)}
+        pathname={window.location.origin}
+        titleTemplate="Pokédex"
+        description={`Discover and explore Pokemon with ${listType}`}
       />
-    <Header>
-      <Title>
-        <Link to="/pagination">
-          <img src={pokemonIcon} alt="Pokemon Icon" /> Pokédex
-        </Link>
-      </Title>
-      <Subtitle>Discover and explore Pokemon with {listType}</Subtitle>
+      <Header>
+        <Title>
+          <Link to="/pagination">
+            <img src={pokemonIcon} alt="Pokemon Icon" /> Pokédex
+          </Link>
+        </Title>
+        <Subtitle>Discover and explore Pokemon with {listType}</Subtitle>
 
-      <Nav>
-        <NavLinkButton to={namedRoutes.pokemon.list.pagination}>Page Controls</NavLinkButton>
-        <NavLinkButton to={namedRoutes.pokemon.list.loadMore}>Load More</NavLinkButton>
-        <NavLinkButton to={namedRoutes.pokemon.list.infiniteScroll}>Infinite Scroll</NavLinkButton>
-      </Nav>
-    </Header>
+        <Nav>
+          <NavLinkButton to={namedRoutes.pokemon.list.pagination}>Page Controls</NavLinkButton>
+          <NavLinkButton to={namedRoutes.pokemon.list.loadMore}>Load More</NavLinkButton>
+          <NavLinkButton to={namedRoutes.pokemon.list.infiniteScroll}>Infinite Scroll</NavLinkButton>
+        </Nav>
+      </Header>
     </>
   );
 };
